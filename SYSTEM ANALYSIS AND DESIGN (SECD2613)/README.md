@@ -1,6 +1,6 @@
 📚 System Analysis and Design – Systech Group Projects
 
-This repository contains our coursework for SECD2613 System Analysis and Design at Universiti Teknologi Malaysia.
+This folder contains our coursework for SECD2613 System Analysis and Design at Universiti Teknologi Malaysia.
 
 It documents the different phases of our project work, from planning and requirement gathering to analysis, design, and implementation.
 

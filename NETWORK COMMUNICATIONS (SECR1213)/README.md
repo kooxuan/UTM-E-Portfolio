@@ -1,6 +1,6 @@
 🌐 SECR1213 – Network Communications
 
-This repository contains group project work for SECR1213 Network Communications at Universiti Teknologi Malaysia.
+This folder contains group project work for SECR1213 Network Communications at Universiti Teknologi Malaysia.
 
 The project focuses on network design and infrastructure planning for a new faculty building, including:
 

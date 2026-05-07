@@ -1,6 +1,6 @@
 🌐 SECV2223 – Web Programming
 
-This project contains our final project for SECV2223 Web Programming at Universiti Teknologi Malaysia.
+This folder contains our final project for SECV2223 Web Programming at Universiti Teknologi Malaysia.
 
 The project, titled “What’s Happening UTM?”, is a centralized web platform that aggregates and promotes campus events in real time.
 

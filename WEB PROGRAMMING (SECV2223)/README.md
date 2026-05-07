@@ -7,19 +7,19 @@ The project, titled “What’s Happening UTM?”, is a centralized web platform
 
 ✨ Project Highlights
 
-📢 Centralized event bulletin for UTM students
+- Centralized event bulletin for UTM students
 
-🔑 User authentication with secure login and profile management
+- User authentication with secure login and profile management
 
-📝 Event CRUD (create, read, update, delete) with photo upload
+- Event CRUD (create, read, update, delete) with photo upload
 
-🔍 Sorting, filtering, and category‑based search
+- Sorting, filtering, and category‑based search
 
-📱 Responsive design for desktop and mobile
+- Responsive design for desktop and mobile
 
-🗺️ Google Maps integration for event locations
+- Google Maps integration for event locations
 
-🛡️ Validation and error handling (client + server side)
+- Validation and error handling (client + server side)
 
 🎯 Purpose
 

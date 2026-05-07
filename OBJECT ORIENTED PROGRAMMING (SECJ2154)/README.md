@@ -1,6 +1,6 @@
 🖥️ SECJ2154 – Object-Oriented Programming
 
-This repository contains our group project for SECJ2154 Object-Oriented Programming at Universiti Teknologi Malaysia.
+This folder contains our group project for SECJ2154 Object-Oriented Programming at Universiti Teknologi Malaysia.
 
 The project is a Campus Facilities Booking System, developed in Java using OOP principles.
 

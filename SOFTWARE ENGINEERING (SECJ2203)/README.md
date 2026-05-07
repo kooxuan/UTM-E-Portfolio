@@ -1,6 +1,6 @@
 💻 SECJ2203 – Software Engineering
 
-This repository contains our group project for SECJ2203 Software Engineering at Universiti Teknologi Malaysia.
+This folder contains our group project for SECJ2203 Software Engineering at Universiti Teknologi Malaysia.
 
 The project documents the design and development of the MindWell Self-Help System, a mental health support platform.
 

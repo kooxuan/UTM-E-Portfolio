@@ -25,5 +25,3 @@ The project, titled “What’s Happening UTM?”, is a centralized web platform
 
 To improve campus engagement and event visibility by consolidating announcements into one platform, ensuring students never miss out on food fairs, club activities, or academic talks.
 
-
-🔗 Live Website: group4debuggers.infinityfreeapp.com (group4debuggers.infinityfreeapp.com in Bing)

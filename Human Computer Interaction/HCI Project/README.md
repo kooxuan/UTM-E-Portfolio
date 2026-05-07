@@ -1,11 +1,19 @@
 This app allowing users to effortlessly locate nearby stations, complete payments securely, and monitor their charging status without any interruptions, providing unmatched convenience for EV users.
+
 This is the blog link which we have done for the project of HCI 
+
 Link : [https://nobodybutyou2.wordpress.com](https://nobodybutyou2.wordpress.com)
+
 Blog content : 
+
                 About us
+                
                 Phase 1 - Project Proposal
+                
                 Phase 2 - Derivation of HTA
+                
                 Phase 3 - Conceptual and Physical Design
+                
                 Phase 4 - Prototyping & Evaluation
 
 using Figma for user interface design

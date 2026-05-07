@@ -1,6 +1,6 @@
 🔢 Computational Mathematics – Group Assignments
 
-This repository contains coursework for SECI1113 Computational Mathematics at Universiti Teknologi Malaysia.
+This folder contains coursework for SECI1113 Computational Mathematics at Universiti Teknologi Malaysia.
 
 It showcases problem-solving techniques in linear algebra, vector spaces, numerical methods, and error analysis, combining both manual calculations and Python implementations.
 

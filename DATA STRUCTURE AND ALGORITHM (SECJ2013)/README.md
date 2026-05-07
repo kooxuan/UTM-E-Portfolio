@@ -1,6 +1,6 @@
 📘 Data Structures and Algorithms – Mini Project
 
-This repository contains our group project for SECJ2013 Data Structures and Algorithms at Universiti Teknologi Malaysia.
+This folder contains our group project for SECJ2013 Data Structures and Algorithms at Universiti Teknologi Malaysia.
 
 The project demonstrates how fundamental data structures and algorithms can be applied in solving practical problems through programming.
 

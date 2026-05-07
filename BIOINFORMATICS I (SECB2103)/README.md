@@ -1,6 +1,6 @@
 🧬 SECB2103 – Bioinformatics I
 
-This repository contains our group project for SECB2103 Bioinformatics I at Universiti Teknologi Malaysia.
+This folder contains our group project for SECB2103 Bioinformatics I at Universiti Teknologi Malaysia.
 
 The project, titled “Find a Gene”, explores computational methods to identify and analyze novel genes using bioinformatics tools.
 

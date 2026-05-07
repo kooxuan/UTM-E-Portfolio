@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - What's Happening UTM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.jpg" alt="Debuggers Logo">
+        <h1>What's Happening UTM</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>My Profile</h1>
+            <p>Manage your account information</p>
+        </div>
+        
+        <div id="message"></div>
+        
+        <div class="profile-info">
+            <h3>Account Information</h3>
+            <div class="info-item">
+                <strong>Username:</strong> <span id="display-username">Loading...</span>
+            </div>
+            <div class="info-item">
+                <strong>Email:</strong> <span id="display-email">Loading...</span>
+            </div>
+            <div class="info-item">
+                <strong>Member Since:</strong> <span id="display-created">Loading...</span>
+            </div>
+        </div>
+        
+        <button onclick="logout()" class="btn logout-btn">Logout</button>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script>
+        window.onload = function() {
+            loadProfile();
+        };
+    </script>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Debuggers | What's Happening UTM</p>
+      <p>Contact: hello@debuggers.com | (601) 234-5678</p>
+    </div>
+  </footer>
+</body>
+</html>

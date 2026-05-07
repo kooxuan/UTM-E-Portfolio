@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post an Event - What's Happening UTM</title>
+  <link rel="stylesheet" href="post_event.css"/>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.jpg" alt="Debuggers Logo">
+        <h1>What's Happening UTM</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <section class="hero">
+  <div class="hero-content">
+    <h2>Discover Events Around UTM</h2>
+    <p>Find club activities, food fairs, tech talks and more — all in real-time!</p>
+    <div class="hero-buttons">
+      <a href="post-event.html" class="btn-orange">Post an Event</a>
+      <a href="event-view.html" class="btn-orange">Browse Events</a>
+    </div>
+  </div>
+</section>
+
+    <section class="form-section">
+      <h2>Post an Event</h2>
+      <form action="post_event.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Event Title" required />
+        <input type="text" name="location" placeholder="Location" required />
+        <input type="datetime-local" name="datetime" required />
+        <textarea name="description" placeholder="Event Description" required></textarea>
+		
+		<label>Upload Event Poster (JPG, PNG):</label>
+		<input type="file" name="poster" accept="image/*" required />
+        <button type="submit" class="btn-primary">Post Event</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Debuggers | What's Happening UTM</p>
+      <p>Contact: hello@debuggers.com | (601) 234-5678</p>
+    </div>
+  </footer>
+</body>
+</html>

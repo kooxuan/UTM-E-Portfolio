@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Locations Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .top-bar {
+      height: 10px;
+      background-color: #000;
+    }
+
+    .navbar {
+      background-color: #800000;
+      padding: 10px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    #map {
+      height: calc(100% - 70px); /* 10px + 60px */
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+  <div class="navbar">
+    <h1>Event Locations Map</h1>
+  </div>
+	<div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([1.5584, 103.6379], 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  // 🔒 Manual events (already on your map)
+  const markers = {
+    "utm-food-fiesta": L.marker([1.5591, 103.6383]).addTo(map)
+      .bindPopup("<b>UTM Food Fiesta</b><br>Scholar's Square"),
+
+    "ai-innovation": L.marker([1.5586, 103.6369]).addTo(map)
+      .bindPopup("<b>AI & Innovation Night</b><br>UTM Library"),
+
+    "research-day": L.marker([1.5601, 103.6395]).addTo(map)
+      .bindPopup("<b>Research & Innovation Day 2025</b><br>Faculty of Computing, UTM"),
+
+    "wacana-madani": L.marker([1.5598, 103.6360]).addTo(map)
+      .bindPopup("<b>Wacana Intelektual Madani</b><br>Dewan Senat, UTMJB"),
+
+    "spikem-2025": L.marker([1.5586, 103.6345]).addTo(map)
+      .bindPopup("<b>SPIKEM 2025</b><br>Dewan Banquet Ibnu Sina, Blok N31")
+  };
+
+  // 🔍 Open popup if hash matches marker
+  window.onload = function () {
+    const hash = window.location.hash.substring(1);
+    if (markers[hash]) {
+      markers[hash].openPopup();
+      map.setView(markers[hash].getLatLng(), 17);
+    }
+  };
+
+  // 🔄 Dynamic events (fetched from DB)
+  fetch('fetch_events.php')
+    .then(response => response.json())
+    .then(events => {
+      let i = 0;
+
+      function addNext() {
+        if (i >= events.length) return;
+
+        const ev = events[i];
+        const loc = encodeURIComponent(ev.location);
+
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${loc}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.length > 0) {
+              const lat = parseFloat(data[0].lat);
+              const lon = parseFloat(data[0].lon);
+
+              L.marker([lat, lon]).addTo(map)
+                .bindPopup(`<b>${ev.title}</b><br>${ev.location}<br>${ev.datetime}`);
+            } else {
+              console.warn(`❌ Location not found: ${ev.location}`);
+            }
+            i++;
+            setTimeout(addNext, 1000); // 1 second delay to avoid API throttling
+          })
+          .catch(err => {
+            console.error("Geocoding failed:", err);
+            i++;
+            setTimeout(addNext, 1000);
+          });
+      }
+
+      addNext();
+    })
+    .catch(err => {
+      console.error("Failed to fetch dynamic events:", err);
+    });
+</script>
+
+</body>
+</html>

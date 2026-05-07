@@ -1,3 +1,5 @@
+Link of Project : https://github.com/DataVoyagers/NormNinja
+
 🌐 SECJ3104 – Application Development
 
 This folder contains our group project system documentation for SECJ3104 Application Development at Universiti Teknologi Malaysia.
